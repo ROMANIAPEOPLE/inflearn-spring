@@ -25,6 +25,7 @@ public class MemberService {
         return member.getId();
     }
 
+    //자바8을 이용한 중복체크
     private void validateDuplicateMember(Member member) {
         memberRepository.findByName(member.getName()).
                 ifPresent(m -> {
