@@ -38,7 +38,7 @@ public class HelloController {
         return hello;
     }
 
-
+    //내브 클래스
     static class Hello {
         private String name;
 
