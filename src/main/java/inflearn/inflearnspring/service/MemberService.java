@@ -11,13 +11,14 @@ import java.util.Optional;
 
 public class MemberService {
 
-
-
     private final MemberRepository memberRepository;
 
+    //생성자를 통해서 memberRepository가 memberService에 주입된다.
+    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
+
     public Long join(Member member) {
         //같은 이름이 있는 중복 회원 X
         validateDuplicateMember(member);
