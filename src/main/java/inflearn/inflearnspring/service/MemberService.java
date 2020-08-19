@@ -14,7 +14,6 @@ public class MemberService {
     private final MemberRepository memberRepository;
 
     //생성자를 통해서 memberRepository가 memberService에 주입된다.
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

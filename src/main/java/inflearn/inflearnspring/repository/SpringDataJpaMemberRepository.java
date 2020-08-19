@@ -1,15 +1,14 @@
 package inflearn.inflearnspring.repository;
 
 import inflearn.inflearnspring.domain.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import javax.swing.text.html.Option;
 import java.util.Optional;
 
+public interface SpringDataJpaMemberRepository extends JpaRepository<Member,Long> , MemberRepository {
 
-public interface MemberRepository {
-    Member save(Member member);
-    Optional<Member> findById(Long id);
+    @Override
     Optional<Member> findByName(String name);
-    List<Member> findAll();
 }
